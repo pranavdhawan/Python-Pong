@@ -1,9 +1,8 @@
 #Simple Pong game in Python 3.9.5. lets try it out lmaoo
 # gay looking boy what you say looking boy?
 import turtle
-import winsound
 
-initial_speed = 0.7
+initial_speed = 0.4
 
 win = turtle.Screen()
 win.title("Pong by killkennyale")
@@ -126,10 +125,8 @@ while True:
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 60 and ball.ycor() > paddle_b.ycor() - 60):
         ball.setx(340)
         ball.dx *= -1
-        winsound.PlaySound("Hit.wav", winsound.SND_ASYNC)
-
-
+        
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 60 and ball.ycor() > paddle_a.ycor() - 60):
         ball.setx(-340)
         ball.dx *= -1
-        winsound.PlaySound("Hit.wav", winsound.SND_ASYNC)
+        
